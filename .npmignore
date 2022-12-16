@@ -1,0 +1,9 @@
+src
+.idea
+babel.config.js
+jest.config.ts
+tsconfig.json
+typedoc.json
+yarn.lock
+dist/internal-tests
+dist/docs
