@@ -9,10 +9,10 @@ yarn add blip-http-errors
 
 ## Usage
 ```js
-    throw new BlipError(message, options); // in your catch statement
+throw new BlipError(message, options); // in your catch statement
 
-    logger.error(err.inspect); // in your logger (⚠️ SERVER ONLY - not for client response)
-    return res.status(blip.statusCode).json(blip); // using your favourite framework - in your error handler (✅ Client safe)
+logger.error(err.inspect); // in your logger (⚠️ SERVER ONLY - not for client response)
+return res.status(blip.statusCode).json(blip); // using your favourite framework - in your error handler (✅ Client safe)
 ```
 *Still confused? Check the [example](#example) below.*
 
