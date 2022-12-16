@@ -99,6 +99,8 @@ Parameters:
     - `rootErr` - The original error.
     - `data` - Any additional metadata for inspection.
 
+<br>
+
 #### blipError.inspection
 > ⚠️ This property is designed for server use only - do not send the response to the client as it may contain
 > sensitive data (such as `data` and `rootErr`'s `name` and `type` properties).
@@ -106,12 +108,18 @@ Parameters:
 Returns a special representation of BlipError that can be inspected by the `console` or custom logging solutions.
 *Aliases*: `blipError.inspect`, `blipError.log`
 
+<br>
+
 #### blipError.message
 Returns the error message to display to the client.
+
+<br>
 
 #### blipError.statusCode
 Returns the [HTTP Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) associated with this error.<br>
 *Aliases*: `blipError.status`, `blipError.code`
+
+<br>
 
 #### blipError.rootErr
 > ⚠️ This property is designed for server use only - it's usually not advisable to send the original Error to the
@@ -119,10 +127,14 @@ Returns the [HTTP Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 Returns the original Error.
 
+<br>
+
 #### blipError.stack
 > ⚠️ Stack traces are not client-safe, and should not be sent to the client.
 
 Returns the stack trace of the `rootErr`, or the stack trace of the BlipError if `rootErr` is not defined.
+
+<br>
 
 #### blipError.originalStack
 > ⚠️ Stack traces are not client-safe, and should not be sent to the client.
