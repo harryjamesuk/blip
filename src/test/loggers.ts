@@ -101,3 +101,13 @@ describe('.inspection aliases', () => {
         expect(err.inspect).toEqual(err.inspection);
     });
 });
+
+describe('BlipInspectionError', () => {
+    it('should set data enumerability dynamically, based on data being defined', () => {
+        const definedData = new BlipError('', {data: {a: 'b'}}).inspection;
+        const undefinedData = new BlipError('').inspection;
+
+        expect(Object.getOwnPropertyDescriptor(definedData, 'data')?.enumerable).toBe(true);
+        expect(Object.getOwnPropertyDescriptor(undefinedData, 'data')?.enumerable).toBe(false);
+    });
+});

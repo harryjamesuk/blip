@@ -79,7 +79,6 @@ class BlipBase extends Error {
 
     constructor(message?: string, options?: BlipOptions) {
         super(message);
-        this.name = 'BlipError';
         this.message = message || '';
         this.statusCode = options?.statusCode || 500;
         this.data = options?.data;
@@ -234,7 +233,7 @@ export class BlipInspectionError extends BlipBase {
 
         Object.defineProperty(this, 'statusCode', { enumerable: true });
         Object.defineProperty(this, 'server', { enumerable: true });
-        Object.defineProperty(this, 'data', { enumerable: true });
+        Object.defineProperty(this, 'data', { enumerable: this.data !== undefined });
     }
 
     /** @private */
