@@ -1,6 +1,6 @@
 {
   "name": "blip-http-errors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Error handling library with special considerations for HTTP clients and logging",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
